@@ -51,7 +51,6 @@ public class TaskList {
             Task task = tasks.get(i);
             System.out.println(i + 1 + " - " + task.getTaskName() + " Date realization: " +  task.getDateRealization());
 
-
             if (task.getIsDone() != null ) {
                 System.out.println( " [" + (task.getIsDone() ? "█" : " ")  + "] " + (task.getIsDone() ? task.getDateRealization() : ""));
             }

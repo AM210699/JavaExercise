@@ -36,7 +36,7 @@ public class TasksLists {
         try {
             fillData();
         } catch (IOException e) {
-            System.out.println("Error al guardar los datos en el archivo " + FILE_NAME);
+            System.out.println(" " + FILE_NAME);
         }
 
     }
@@ -113,7 +113,7 @@ public class TasksLists {
                         try {
                             fillData();
                         } catch (IOException e) {
-                            System.out.println("Error al guardar los datos en el archivo " + FILE_NAME);
+                            System.out.println("Unable to save data in file:  " + FILE_NAME);
                         }
 
                     }
@@ -211,11 +211,11 @@ public class TasksLists {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, StandardCharsets.UTF_8))) {
             for (TaskList taskList : taskList) {
-                // Escribir el nombre de la lista en el archivo
+                // Write the name of the list in the file
                 writer.write("List: " + taskList.getTaskListName() + "\n");
 
                 for (Task task : taskList.getTasks()) {
-                    // Escribir el nombre de la tarea y su estado en el archivo
+                    // Write name of the task and the state in the file
                     writer.write("Task: " + task.getTaskName()  + "\n");
                     writer.write(" Date Realization: " + task.getDateRealization() + "\n");
 

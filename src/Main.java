@@ -17,7 +17,6 @@ public class Main {
     public static void main(String... args) {
         while(isProceeding) {
             menu();
-
         }
     }
 
@@ -40,6 +39,7 @@ public class Main {
         System.out.println("------------------------------------------");
 
         Reader reader = new Reader();
+
         try {
             chooseMenuOption(reader.readOptionInt());
         } catch (InputMismatchException e) {
@@ -49,10 +49,7 @@ public class Main {
 
     }
 
-
     public static void chooseMenuOption(int optionSelected) {
-        System.out.printf("%n%nLa opción seleccionada es: %d%n", optionSelected);
-
 
         switch (optionSelected) {
             case OPTION_1:
